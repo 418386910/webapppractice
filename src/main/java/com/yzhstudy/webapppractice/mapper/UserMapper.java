@@ -1,9 +1,7 @@
 package com.yzhstudy.webapppractice.mapper;
 
 import com.yzhstudy.webapppractice.model.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface UserMapper {
@@ -14,4 +12,8 @@ public interface UserMapper {
     User getUser(String username);
     @Select("select * from user where username = #{username} and password = #{password}")
     User login(String username,String password);
+    @Delete("delete from user where username = #{username}")
+    void deleteUser(String username);
+    @Update("update user set password = #{password} where username = #{username}")
+    void updateUser(String username,String password);
 }

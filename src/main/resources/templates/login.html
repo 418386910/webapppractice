@@ -7,13 +7,34 @@
 </head>
 <body>
     <h2>登录页面</h2>
-    <form action="/login" method="post">
-        <label for="">用户名</label>
-        <input type="text" name="username" placeholder="用户名"><br><p>
-        <label for="">密码</label>
-        <input type="password" name="password" placeholder="密码"><br><p>
-        <input type="submit" value="登录">
+    <div>
+        <form action="/login" method="post">
+            <label for="">用户名</label>
+            <input type="text" name="username" placeholder="用户名"><br><p>
+            <label for="">密码</label>
+            <input type="password" name="password" placeholder="密码"><br><p>
+            <input type="submit" value="登录">
+        </form>
         <h2 th:utext="${msg2}"></h2>
-    </form>
+    </div>
+    <div>
+        <form action="/deleteUser" method="post">
+            <label for="">用户名</label>
+            <input type="text" name="username" placeholder="用户名"><br><p>
+            <input type="submit" value="删除用户">
+        </form>
+        <h2 th:utext="${msg3}"></h2>
+    </div>
+    <div>
+        <form action="/updateUser" method="post">
+            <label for="">用户名</label>
+            <input type="text" name="username" placeholder="用户名"><br><p>
+            <label for="">密码</label>
+            <input type="password" name="password" placeholder="密码"><br><p>
+            <input type="submit" value="更改密码">
+        </form>
+        <h2 th:utext="${msg4}"></h2>
+    </div>
+
 </body>
 </html>

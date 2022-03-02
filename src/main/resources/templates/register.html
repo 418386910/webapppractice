@@ -7,6 +7,14 @@
 <body>
         <h2>欢迎进入注册页面</h2>
         <div>
+            <form action="/getUser" method="post">
+                <label for="">用户名</label>
+                <input type="text" name="username" placeholder="用户名"><br><p>
+                <input type="submit" value="查找用户">
+            </form>
+            <h2 th:utext="${msg}"></h2>
+        </div>
+        <div>
             <form action="/register" method="post">
                 <label for="">用户名</label>
                 <input type="text" name="username" placeholder="用户名"><br><p>
@@ -15,14 +23,6 @@
                 <input type="submit" value="注册">
                 <h2 th:utext="${msg1}"></h2>
             </form>
-        </div>
-        <div>
-            <form action="/getUser" method="post">
-                <label for="">用户名</label>
-                <input type="text" name="username" placeholder="用户名"><br><p>
-                <input type="submit" value="查找用户">
-            </form>
-            <h2 th:utext="${msg}"></h2>
         </div>
 
 </body>
